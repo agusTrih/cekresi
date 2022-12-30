@@ -1,5 +1,17 @@
+import Hero from 'components/atoms/Hero';
+import InputText from 'components/atoms/Input/InputText';
 import React from 'react';
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Hero
+        title="Mudah dan Cepat, Cek Resi Anda Sekarang Juga"
+        description="Kini Anda dapat mengetahui status pengiriman barang Anda dengan mudah dan cepat. Cukup dengan mengakses situs kami, Anda dapat mengetahui status pengiriman barang Anda dengan sekali klik saja. Jangan sampai Anda ketinggalan informasi penting tentang pengiriman barang Anda, cek resi Anda sekarang juga di situs kami"
+      />
+      <section className="text-center my-20">
+        <InputText />
+      </section>
+    </div>
+  );
 }
