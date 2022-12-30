@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PUBLIC_URL } from 'config/env';
 
 export default function Hero(props) {
-  const { title, description } = props;
+  const { title, description, children } = props;
   return (
     <div data-testid="hero" className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           alt=""
-          src="https://placeimg.com/260/400/arch"
+          src={`${PUBLIC_URL}/assets/icon.png`}
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
@@ -16,9 +17,7 @@ export default function Hero(props) {
           <p data-testid="description" className="py-6">
             {description}
           </p>
-          <button className="btn btn-primary" type="button">
-            Get Started
-          </button>
+          {children}
         </div>
       </div>
     </div>
@@ -28,9 +27,11 @@ export default function Hero(props) {
 Hero.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  children: PropTypes.node,
 };
 
 Hero.defaultProps = {
   title: '',
   description: '',
+  children: '',
 };

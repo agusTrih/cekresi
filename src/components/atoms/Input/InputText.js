@@ -5,7 +5,7 @@ export default function InputText() {
     <input
       type="text"
       placeholder="Masukan Resi"
-      className="input input-bordered w-full max-w-xs"
+      className="input input-bordered w-full max-w-full"
     />
   );
 }
